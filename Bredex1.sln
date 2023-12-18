@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bredex1", "Bredex1.csproj", "{879A79A4-AE84-4C73-AB4D-6D2B1587B1C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{879A79A4-AE84-4C73-AB4D-6D2B1587B1C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{879A79A4-AE84-4C73-AB4D-6D2B1587B1C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{879A79A4-AE84-4C73-AB4D-6D2B1587B1C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{879A79A4-AE84-4C73-AB4D-6D2B1587B1C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD0BE913-FB79-4070-B070-CC8682918BEB}
+	EndGlobalSection
+EndGlobal

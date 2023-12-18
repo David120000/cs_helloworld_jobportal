@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Bredex1.props" />
+</Project>
