@@ -1,5 +1,6 @@
 using Bredex1.controller.model;
 using Bredex1.service;
+using Bredex1.src.model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Bredex1.controller
@@ -19,10 +20,15 @@ namespace Bredex1.controller
         public IActionResult AuthenticateClient(Client client) {
 
             AuthenticationReponse response = ClientService.AuthenticateUser(client);
-            Console.WriteLine(response);
             
             return Ok(response);
         }
+
+        // [HttpGet("/getkeys")]
+        // public List<ApiKeyCached> GetAllAuthorizedKeys()
+        // {
+        //     return ClientService.GetAllAuthorizedKeys();
+        // }
 
 
     }

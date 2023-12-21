@@ -1,9 +1,9 @@
 namespace Bredex1.controller.model
 {
-    public class Client(string name, string email)
+    public class Client
     {
-        public string Name { get; } = name;
-        public string Email { get; } = email;
+        public string? Name { get; set; }
+        public string? Email { get; set; }
 
 
         public override string ToString()

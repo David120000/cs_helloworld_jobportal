@@ -1,9 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Bredex1.controller.model
 {
-    public class AuthenticationReponse(Client client, string apiKey)
+    public class AuthenticationReponse
     {
-        private Client Client { get; } = client;
-        private string ApiKey { get; } = apiKey;
+        public Client? Client { get; set; }
+        [Key]
+        public string? ApiKey { get; set; }
 
 
         public override string ToString()
