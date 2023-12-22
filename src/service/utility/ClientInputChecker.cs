@@ -1,4 +1,5 @@
 using System.Text.RegularExpressions;
+using Bredex1.src.model;
 
 namespace Bredex1.service.utility
 {
@@ -21,6 +22,28 @@ namespace Bredex1.service.utility
             Match match = regex.Match(userEmail);
 
             return match.Success;
+        }
+
+        public bool ValidatePositionData(Position position) {
+
+            bool validPositionData = true;
+
+            if(position.Location.Length > 50 || position.Location.Length == 0 || position.Title.Length > 50 || position.Title.Length == 0) {
+                validPositionData = true;
+            }
+
+            return validPositionData;
+        }
+
+        public bool ValidateSearchKeyword(string keyword) {
+
+            bool validKeyword = true;
+
+            if(keyword.Length > 50 || keyword.Length == 0) {
+                validKeyword = false;
+            }
+
+            return validKeyword;
         }
     }
 }

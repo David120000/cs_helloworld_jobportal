@@ -33,8 +33,57 @@ namespace Bredex1.src.controller
                 Console.WriteLine(e.StackTrace);
                 return BadRequest();
             }
+            catch(ArgumentException e) {
+
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+                return BadRequest();
+            }
+
+        }
 
 
+        [HttpGet("/position/search")]
+        public IActionResult SearchPositions(string keyword) {
+
+            Request.Headers.TryGetValue("ApiKey", out var apiKeyValue);
+            
+            try {   
+
+                PositionURLs urls = PositionService.SearchPositionsByKeyword(apiKeyValue, keyword);
+                return Ok(urls);
+            }
+            catch(VerificationException e) {
+
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+                return BadRequest();
+            }
+            catch(ArgumentException e) {
+                
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+                return BadRequest();
+            }
+        }
+
+
+        [HttpGet("/position/{id}")]
+        public IActionResult GetPositionById(string id) {
+
+            Request.Headers.TryGetValue("ApiKey", out var apiKeyValue);
+            
+            try {   
+
+                PositionDBData position = PositionService.GetPositionById(apiKeyValue, id);
+                return Ok(position);
+            }
+            catch(VerificationException e) {
+
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+                return BadRequest();
+            }
         }
 
     }
